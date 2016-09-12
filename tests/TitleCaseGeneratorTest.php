@@ -58,6 +58,48 @@
 
         }
 
+        function test_makeTitleCase_ignoreNonLetterChars()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "57 beowulf alternative endings!!";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("57 Beowulf Alternative Endings!!", $result);
+
+        }
+
+        function test_makeTitleCase_manageAllCaps()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "BEOWULF ON THE ROCKS";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Beowulf on the Rocks", $result);
+
+        }
+
+        function test_makeTitleCase_manageMixCase()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "BeoWulf aNd mE";
+
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("Beowulf and Me", $result);
+
+        }
+
 
 
     }
