@@ -14,11 +14,6 @@ To use the code, you can clone the repository at [https://github.com/jryanconkli
 
 ## Specifications
 
-Specification - Counts up to inputted number
-
-__Input__: 2
-__Output__:  1, 2
-
 Specification - It capitalizes the first letter of a single word.
 
 __Input__: beowulf
