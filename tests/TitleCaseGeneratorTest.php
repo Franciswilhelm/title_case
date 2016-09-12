@@ -44,7 +44,19 @@
             $this->assertEquals("Beowulf from Brighton Beach", $result);
         }
 
+        function test_makeTitleCase_alwaysUpperFirst()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "from beowulf to the hulk";
 
+            //Act
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            //Assert
+            $this->assertEquals("From Beowulf to the Hulk", $result);
+
+        }
 
 
 
